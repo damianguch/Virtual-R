@@ -18,15 +18,17 @@ const Navbar = () => {
             <img className="h-10 w-10 mr-2" src={logo} alt="logo" />
             <span className="text-xl tracking-tight">VirtualR</span>
           </div>
-          <ul className="hidden lg:flex ml-14 space-x-12">
+          <ul className="hidden lg:flex ml-14 space-x-12 text-base">
             {navItems.map((item, index) => (
               <li key={index}>
                 <a href={item.href}>{item.label}</a>
               </li>
             ))}
           </ul>
-          <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <a href="#" className="py-2 px-3 border rounded-md">
+          <div className="hidden lg:flex justify-center space-x-12 items-center text-base">
+            <a
+              href="#"
+              className="py-2 px-3 border rounded-md  hover:bg-white hover:text-black">
               Sign In
             </a>
             <a
@@ -42,8 +44,8 @@ const Navbar = () => {
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
-            <ul>
+          <div className="fixed right-0 text-base z-20 bg-neutral-900  w-full p-12 flex flex-col justify-center items-center lg:hidden">
+            <ul className="">
               {navItems.map((item, index) => (
                 <li key={index} className="py-3">
                   <a href={item.href}>{item.label}</a>
@@ -51,7 +53,9 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="flex space-x-6">
-              <a href="#" className="py-2 px-3 rounded-md border">
+              <a
+                href="#"
+                className="py-2 px-3 rounded-md border hover:bg-white hover:text-black">
                 Sign In
               </a>
               <a
